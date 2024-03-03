@@ -11,7 +11,7 @@ font["S"].addPosSub("s_subtable", "Sacute")
 # substitute JSON with the above s_lookup
 # fmt: off
 font.addLookup("JSON_lookup", "gsub_contextchain", (),
-               (("aalt", (("DFLT",("dflt")),
+               (("calt", (("DFLT",("dflt")),
                           ("bamu", ("dflt")),
                           ("cyrl", ("dflt")),
                           ("gjr2", ("dflt")),
@@ -22,7 +22,7 @@ font.addContextualSubtable("JSON_lookup", "JSON_subtable", "coverage", "[J j] | 
 # fmt: on
 
 # change fontname
-font.fontname += " JSON"
+font.fontname += "-JSON"
 font.familyname += " JSON"
 font.fullname += " JSON"
 
