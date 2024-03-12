@@ -1,6 +1,5 @@
 # **JŚON**
 
-## **Introduction:** 💬
 JSON, or JavaScript Object Notation, is a widely used data format in web applications. However, there has
 been ongoing debate about the correct pronunciation of this acronym. In a 
 [YouTube video](https://www.youtube.com/watch?v=uR-f4b0G9lo) featuring the creator of JSON, Douglas Crockford,
@@ -11,10 +10,18 @@ this script comes into action. It alters existing TTF or OTF font files by subst
 "JSON" with "JŚON", following the one and only CORRECT pronunciation.
 
 ## **Table of Contents** 🔎
-1. [Introduction](#introduction-)
+1. [Prepatched Fonts](#prepatched-fonts-)
 2. [Prerequisites](#prerequisites-)
 3. [Usage](#usage-)
 4. [Credits](#credits-)
+
+## **Prepatched Fonts** 🤓
+We've got some prepatched fonts for every one of you to use.
+Go to [/patched-fonts](https://github.com/Eggrror404/json/tree/master/patched-fonts)
+and you'll see some fonts modified from Google Fonts.
+
+If something doesn't work - _don't let me know_.
+Maybe re-patching it with the script would work :)
 
 ## **Prerequisites** 💻
 To use this script, make sure you have the following tools installed:
@@ -44,6 +51,15 @@ $ python substitute.py -o patched_font.ttf -n "JŚON Font" input.ttf
 ```
 This command will patch the font `input.ttf`, output the patched font as `patched_font.ttf`, and
 set its fontname to `JŚON Font`.
+
+### Pro Tip!
+
+Use the following script to patch all ttf files in a folder, recursively:
+```bash
+ls ./**/*.ttf | while read font; do
+  python substitute.py -o ${font:0:${#font}-4}-JSON.ttf $font
+done
+```
 
 ## **Credits** 🌐
 Thanks to [ToxicFrog/Ligaturizer](https://github.com/ToxicFrog/Ligaturizer)
